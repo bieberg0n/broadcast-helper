@@ -1,0 +1,10 @@
+{
+  debug: false,
+  server_ip: '10.0.0.1',
+  server_port: 4040,
+  broadcast_list: [
+    '10.0.0.2',
+    '10.0.0.3',
+    '10.0.0.4',
+  ]
+}
