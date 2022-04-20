@@ -34,6 +34,7 @@ class Server:
 		listen_port = self.cfg['server_port']
 
 		s = socket.socket(2, 2)
+		s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 		s.bind((listen_ip, listen_port))
 		log(f'listen on: {listen_ip}:{listen_port}')
 
@@ -49,3 +50,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+

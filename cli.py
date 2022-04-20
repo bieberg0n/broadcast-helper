@@ -33,7 +33,7 @@ class Client:
 		log(f'send to: {self.serv_ip}:{self.serv_port}, data len:{len(data)}')
 
 	def run(self):
-		f = 'dst net 255.255.255.255'
+		f = 'dst net 255.255.255.255 and udp'
 		log('sniff:', f)
 		sniff(filter=f, prn=self.prn)
 
